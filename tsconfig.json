@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "module": "commonjs"
+    },
+    "files": [
+      "lib/angular2.d.ts",
+      "app.ts"
+    ]
+}
