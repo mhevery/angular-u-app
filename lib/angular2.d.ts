@@ -1,15 +1,12 @@
-declare var ng: angular.NgStatic;
 
-declare module angular {
-  interface List<T> extends Array<T> {}
-  interface StringMap<K, V> extends Object {}
-  
-  interface NgStatic {
-    Component: ComponentFactory;
-    View: ViewFactory;
-    bootstrap(type: Function);
-  }
-  
+declare module ng {
+  class StringMap<K, V> {}
+ 
+  function bootstrap(type: Function);
+  var Component: ComponentFactory;
+  var View: ViewFactory;
+  var formDirectives: Array<Function>
+ 
   interface Annotation {}
   
   interface ComponentFactory {
@@ -56,10 +53,10 @@ declare module angular {
   interface ViewArgs {
     templateUrl?: string;
     template?: string;
-    directives?: List<Function | any | List<any>>;
+    directives?: Array<Function | any | Array<any>>;
     renderer?: string;
-    styles?: List<string>;
-    styleUrls?: List<string>;
+    styles?: Array<string>;
+    styleUrls?: Array<string>;
   }
 
   interface View extends Annotation, ViewArgs {
@@ -72,8 +69,6 @@ declare module angular {
       extends?: Function
     })
   }
-
-  function bootstrap(Function);
 }
 
 

@@ -1,0 +1,12 @@
+<form>
+	<label for="username">Username:</label>
+	<input id="username" type="text" 
+	 	   [ng-model]="username" (ng-model)="username = $event"></input>
+
+	<label for="password">Username:</label>
+	<input id="password" type="password"></input>
+		
+	<button (click)="login()">Login</button>
+		
+    {{username}}/{{password}}
+</form>

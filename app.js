@@ -10,6 +10,25 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require("angular2/angular2");
+var Login = (function () {
+    function Login() {
+        this.username = 'misko';
+        this.password = '';
+    }
+    Login.prototype.login = function () {
+    };
+    Login = __decorate([
+        angular2_1.Component({
+            selector: 'login'
+        }),
+        angular2_1.View({
+            templateUrl: 'login.html',
+            directives: [angular2_1.formDirectives]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Login);
+    return Login;
+})();
 var AngularUApp = (function () {
     function AngularUApp() {
         this.name = 'World';
@@ -18,8 +37,13 @@ var AngularUApp = (function () {
         alert('Hello ' + this.name);
     };
     AngularUApp = __decorate([
-        angular2_1.Component({ selector: 'angular-u-app' }),
-        angular2_1.View({ templateUrl: 'app.html' }), 
+        angular2_1.Component({
+            selector: 'angular-u-app'
+        }),
+        angular2_1.View({
+            templateUrl: 'app.html',
+            directives: [Login]
+        }), 
         __metadata('design:paramtypes', [])
     ], AngularUApp);
     return AngularUApp;
