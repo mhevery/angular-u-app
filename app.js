@@ -1,13 +1,13 @@
-var AngularUApp = ng.
-    Component({ selector: 'angular-u-app' }).
-    View({ templateUrl: 'app.html' }).
-    Class({
-    constructor: function () {
+var AngularUApp = (function () {
+    function AngularUApp() {
         this.name = 'World';
-    },
-    greet: function () {
-        alert('Hello ' + this.name);
     }
-});
+    AngularUApp.prototype.greet = function () {
+        alert('Hello ' + this.name);
+    };
+    return AngularUApp;
+})();
+ng.Component({ selector: 'angular-u-app' })(AngularUApp);
+ng.View({ templateUrl: 'app.html' })(AngularUApp);
 ng.bootstrap(AngularUApp);
 //# sourceMappingURL=app.js.map

@@ -1,13 +1,16 @@
-var AngularUApp = ng.
-  Component({ selector: 'angular-u-app' }).
-  View({ templateUrl: 'app.html' }).
-  Class({
-    constructor: function() {
-      this.name = 'World';
-    },
-    greet: function() {
-      alert('Hello ' + this.name);
-    }
-  });
+
+class AngularUApp {
+  name;
+  constructor() {
+    this.name = 'World';
+  }
+  
+  greet() {
+    alert('Hello ' + this.name);
+  }
+}
+
+ng.Component({ selector: 'angular-u-app' })(AngularUApp)
+ng.View({ templateUrl: 'app.html' })(AngularUApp)
 
 ng.bootstrap(AngularUApp);
