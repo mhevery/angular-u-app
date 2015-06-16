@@ -77,6 +77,6 @@ declare module angular {
 }
 
 
-declare module "angular2" {
+declare module "angular2/angular2" {
   export = ng;
 }

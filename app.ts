@@ -1,4 +1,7 @@
+import * as ng from "angular2/angular2";
 
+@ng.Component({ selector: 'angular-u-app' })
+@ng.View({ templateUrl: 'app.html' })
 class AngularUApp {
   name;
   constructor() {
@@ -10,7 +13,5 @@ class AngularUApp {
   }
 }
 
-ng.Component({ selector: 'angular-u-app' })(AngularUApp)
-ng.View({ templateUrl: 'app.html' })(AngularUApp)
 
 ng.bootstrap(AngularUApp);

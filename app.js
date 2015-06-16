@@ -1,3 +1,15 @@
+if (typeof __decorate !== "function") __decorate = function (decorators, target, key, desc) {
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+    switch (arguments.length) {
+        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+    }
+};
+if (typeof __metadata !== "function") __metadata = function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var ng = require("angular2/angular2");
 var AngularUApp = (function () {
     function AngularUApp() {
         this.name = 'World';
@@ -5,9 +17,12 @@ var AngularUApp = (function () {
     AngularUApp.prototype.greet = function () {
         alert('Hello ' + this.name);
     };
+    AngularUApp = __decorate([
+        ng.Component({ selector: 'angular-u-app' }),
+        ng.View({ templateUrl: 'app.html' }), 
+        __metadata('design:paramtypes', [])
+    ], AngularUApp);
     return AngularUApp;
 })();
-ng.Component({ selector: 'angular-u-app' })(AngularUApp);
-ng.View({ templateUrl: 'app.html' })(AngularUApp);
 ng.bootstrap(AngularUApp);
 //# sourceMappingURL=app.js.map
