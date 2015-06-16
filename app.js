@@ -9,7 +9,7 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var ng = require("angular2/angular2");
+var angular2_1 = require("angular2/angular2");
 var AngularUApp = (function () {
     function AngularUApp() {
         this.name = 'World';
@@ -18,11 +18,11 @@ var AngularUApp = (function () {
         alert('Hello ' + this.name);
     };
     AngularUApp = __decorate([
-        ng.Component({ selector: 'angular-u-app' }),
-        ng.View({ templateUrl: 'app.html' }), 
+        angular2_1.Component({ selector: 'angular-u-app' }),
+        angular2_1.View({ templateUrl: 'app.html' }), 
         __metadata('design:paramtypes', [])
     ], AngularUApp);
     return AngularUApp;
 })();
-ng.bootstrap(AngularUApp);
+angular2_1.bootstrap(AngularUApp);
 //# sourceMappingURL=app.js.map
