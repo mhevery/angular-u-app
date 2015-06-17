@@ -26,7 +26,7 @@ class Login {
   properties: ['user']
 })
 @View({
-  templateUrl: 'shell.html'
+  templateUrl: 'greeter.html'
 })
 class Greeter {
   user:string;

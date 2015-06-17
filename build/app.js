@@ -47,7 +47,7 @@ var Greeter = (function () {
             properties: ['user']
         }),
         angular2_1.View({
-            templateUrl: 'shell.html'
+            templateUrl: 'greeter.html'
         }), 
         __metadata('design:paramtypes', [])
     ], Greeter);
