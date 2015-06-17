@@ -1,10 +1,14 @@
-<form>
-	<label for="username">Username:</label>
-	<input id="username" type="text" 
-	 	   [(ng-model)]="username"></input>
+<form style="width: 300px">
+	<md-input-container>
+		<label for="username">Username:</label>
+		<input id="username" type="text" 
+		 	   [(ng-model)]="username"></input>
+	</md-input-container>
 
-	<label for="password">Username:</label>
-	<input id="password" type="password" [(ng-model)]="password"></input>
+    <md-input-container>
+		<label for="password">Password:</label>
+		<input id="password" type="password" [(ng-model)]="password"></input>
+	</md-input-container>
 		
 	<button (click)="login()">Login</button>
 		

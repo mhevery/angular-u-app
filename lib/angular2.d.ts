@@ -79,6 +79,8 @@ declare module ng {
     throw(error):any;
     return(value?):any;
   }
+  
+  class NgIf {}
 }
 
 

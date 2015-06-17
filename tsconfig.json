@@ -7,6 +7,7 @@
     },
     "files": [
       "lib/angular2.d.ts",
+      "lib/angular2_material.d.ts",
       "app.ts"
     ]
 }

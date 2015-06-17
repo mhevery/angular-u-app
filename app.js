@@ -10,10 +10,11 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require("angular2/angular2");
+var angular2_material_1 = require("angular2_material");
 var Login = (function () {
     function Login() {
         this.success = new angular2_1.EventEmitter();
-        this.username = 'misko';
+        this.username = '';
         this.password = '';
     }
     Login.prototype.login = function () {
@@ -28,26 +29,29 @@ var Login = (function () {
         }),
         angular2_1.View({
             templateUrl: 'login.html',
-            directives: [angular2_1.formDirectives]
+            directives: [angular2_1.formDirectives, angular2_material_1.materialDirectives]
         }), 
         __metadata('design:paramtypes', [])
     ], Login);
     return Login;
 })();
-var Shell = (function () {
-    function Shell() {
+var Greeter = (function () {
+    function Greeter() {
     }
-    Shell = __decorate([
+    Greeter.prototype.greet = function () {
+        alert('Hello ' + this.user + '!');
+    };
+    Greeter = __decorate([
         angular2_1.Component({
-            selector: 'shell',
+            selector: 'greeter',
             properties: ['user']
         }),
         angular2_1.View({
             templateUrl: 'shell.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], Shell);
-    return Shell;
+    ], Greeter);
+    return Greeter;
 })();
 var AngularUApp = (function () {
     function AngularUApp() {
@@ -59,7 +63,7 @@ var AngularUApp = (function () {
         }),
         angular2_1.View({
             templateUrl: 'app.html',
-            directives: [Login, Shell, angular2_1.NgIf]
+            directives: [Login, Greeter, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
     ], AngularUApp);

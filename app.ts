@@ -1,4 +1,5 @@
 import {Component, View, bootstrap, formDirectives, EventEmitter, NgIf} from "angular2/angular2";
+import {materialDirectives} from "angular2_material";
 
 @Component({ 
   selector: 'login',
@@ -6,11 +7,11 @@ import {Component, View, bootstrap, formDirectives, EventEmitter, NgIf} from "an
 })
 @View({ 
   templateUrl: 'login.html',
-  directives: [formDirectives]
+  directives: [formDirectives, materialDirectives]
 })
 class Login {
   success = new EventEmitter();
-  username: string = 'misko';
+  username: string = '';
   password: string = '';
   
   login() {
@@ -21,14 +22,18 @@ class Login {
 }
 
 @Component({
-  selector: 'shell',
+  selector: 'greeter',
   properties: ['user']
 })
 @View({
   templateUrl: 'shell.html'
 })
-class Shell {
-  user:string;  
+class Greeter {
+  user:string;
+  
+  greet() {
+    alert('Hello ' + this.user + '!');
+  }
 }
 
 @Component({ 
@@ -36,7 +41,7 @@ class Shell {
 })
 @View({ 
   templateUrl: 'app.html', 
-  directives: [Login, Shell, NgIf] 
+  directives: [Login, Greeter, NgIf] 
 })
 class AngularUApp {
   username = null;

@@ -1,0 +1,16 @@
+name: angular2_material
+version: <%= packageJson.version %>
+authors:
+<%= Object.keys(packageJson.contributors).map(function(name) {
+  return '- '+name+' <'+packageJson.contributors[name]+'>';
+}).join('\n') %>
+description: Google material design components for Angular 2
+homepage: <%= packageJson.homepage %>
+environment:
+  sdk: '>=1.10.0-dev.1.10 <2.0.0'
+dependencies:
+  angular2: '^<%= packageJson.version %>'
+  browser: '^0.10.0'
+dependency_overrides:
+  angular2:
+    path: ../angular2
