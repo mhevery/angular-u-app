@@ -10,4 +10,3 @@ declare module "angular2_material/src/components/button/button" {
 declare module "angular2_material" {
 	var materialDirectives: any[];
 }
-

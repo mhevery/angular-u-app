@@ -5,7 +5,8 @@ declare module ng {
   function bootstrap(type: Function);
   var Component: ComponentFactory;
   var View: ViewFactory;
-  var formDirectives: Array<Function>
+  var formDirectives: Array<Function>;
+  var coreDirectives: Array<Function>;
  
   interface Annotation {}
   

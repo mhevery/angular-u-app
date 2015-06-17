@@ -1,16 +1,18 @@
 <form style="width: 300px">
-	<md-input-container>
-		<label for="username">Username:</label>
-		<input id="username" type="text" 
-		 	   [(ng-model)]="username"></input>
-	</md-input-container>
+  <md-input-container>
+    <label for="username">Username:</label>
+    <input id="username" type="text">
+  </md-input-container>
 
-    <md-input-container>
-		<label for="password">Password:</label>
-		<input id="password" type="password" [(ng-model)]="password"></input>
-	</md-input-container>
+  <md-input-container>
+  	<label for="password">Password:</label>
+  	<input id="password" type="password">
+  </md-input-container>
+
+  <br/>
+  	
+  <button (click)="login()">Login</button>
 		
-	<button (click)="login()">Login</button>
-		
-    {{username}}/{{password}}
+  <hr/>
+  DEBUG: {{username}}/{{password}}
 </form>

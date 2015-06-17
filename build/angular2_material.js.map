@@ -1,1 +1,1 @@
-{"version":3,"file":"angular2_material.js","sourceRoot":"src/","sources":["angular2_material.ts"],"names":[],"mappings":"AAAA,sBAAwC,8CAA8C,CAAC,CAAA;AAG5E,0BAAkB,GAAG,CAAC,wBAAgB,EAAE,eAAO,CAAC,CAAC"}
+{"version":3,"file":"angular2_material.js","sourceRoot":"","sources":["../angular2_material.ts"],"names":[],"mappings":"AAAA,sBAAwC,iDAAiD,CAAC,CAAA;AAG/E,0BAAkB,GAAG,CAAC,wBAAgB,EAAE,eAAO,CAAC,CAAC"}

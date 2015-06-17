@@ -3,10 +3,12 @@
     <title>AngularU: App</title>
     <link rel="stylesheet" type="text/css" href="/angular2_material/src/components/input/input.css" media="screen" />
 
-    <script type="text/javascript" src="lib/angular2.sfx.dev.js"></script>    
-    <script type="text/javascript" src="build/app.js"></script>
+    <script src="lib/traceur-runtime.js"></script>
+    <script src="lib/system@0.16.11.js"></script>
+    <script src="lib/angular2.dev.js"></script>
   </head>
   <body>
   	<au-greeter>Loading...</au-greeter>
+    <script>System.import('./build/app');</script>
   </body>
 </html>

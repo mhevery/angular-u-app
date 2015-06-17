@@ -1,0 +1,16 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	// Controls the rendering size of tabs in characters. If set to auto, the value will be guessed based on the opened file.
+	"editor.tabSize": 2,
+
+	// Controls if the editor will insert spaces for tabs. If set to auto, the value will be guessed based on the opened file.
+	"editor.insertSpaces": true,
+  
+	"search.excludeFolders": [
+		".git",
+		"node_modules",
+		"bower_components",
+    "build"
+	]
+
+}
