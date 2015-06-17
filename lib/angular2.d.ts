@@ -69,6 +69,16 @@ declare module ng {
       extends?: Function
     })
   }
+  
+  class Observable {
+    observer(generator: any): Object;
+  }
+  
+  class EventEmitter extends Observable {
+    next(value):any;
+    throw(error):any;
+    return(value?):any;
+  }
 }
 
 

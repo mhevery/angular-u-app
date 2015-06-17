@@ -1,38 +1,47 @@
-import {Component, View, bootstrap, formDirectives} from "angular2/angular2";
+import {Component, View, bootstrap, formDirectives, EventEmitter, NgIf} from "angular2/angular2";
 
-@Component({
-  selector: 'login'
-}) 
-@View({
+@Component({ 
+  selector: 'login',
+  events: ['success']
+})
+@View({ 
   templateUrl: 'login.html',
   directives: [formDirectives]
 })
 class Login {
+  success = new EventEmitter();
   username: string = 'misko';
   password: string = '';
   
   login() {
-    
+    if (this.password == '123') {
+      this.success.next(this.username);
+    }
   }
 }
 
+@Component({
+  selector: 'shell',
+  properties: ['user']
+})
+@View({
+  templateUrl: 'shell.html'
+})
+class Shell {
+  user:string;  
+}
 
 @Component({ 
   selector: 'angular-u-app' 
 })
 @View({ 
   templateUrl: 'app.html', 
-  directives: [Login] 
+  directives: [Login, Shell, NgIf] 
 })
 class AngularUApp {
-  name;
+  username = null;
   constructor() {
-    this.name = 'World';
-  }
-  
-  greet() {
-    alert('Hello ' + this.name);
-  }
+  }  
 }
 
 

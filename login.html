@@ -1,10 +1,10 @@
 <form>
 	<label for="username">Username:</label>
 	<input id="username" type="text" 
-	 	   [ng-model]="username" (ng-model)="username = $event"></input>
+	 	   [(ng-model)]="username"></input>
 
 	<label for="password">Username:</label>
-	<input id="password" type="password"></input>
+	<input id="password" type="password" [(ng-model)]="password"></input>
 		
 	<button (click)="login()">Login</button>
 		

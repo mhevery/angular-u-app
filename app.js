@@ -12,14 +12,19 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 var angular2_1 = require("angular2/angular2");
 var Login = (function () {
     function Login() {
+        this.success = new angular2_1.EventEmitter();
         this.username = 'misko';
         this.password = '';
     }
     Login.prototype.login = function () {
+        if (this.password == '123') {
+            this.success.next(this.username);
+        }
     };
     Login = __decorate([
         angular2_1.Component({
-            selector: 'login'
+            selector: 'login',
+            events: ['success']
         }),
         angular2_1.View({
             templateUrl: 'login.html',
@@ -29,20 +34,32 @@ var Login = (function () {
     ], Login);
     return Login;
 })();
+var Shell = (function () {
+    function Shell() {
+    }
+    Shell = __decorate([
+        angular2_1.Component({
+            selector: 'shell',
+            properties: ['user']
+        }),
+        angular2_1.View({
+            templateUrl: 'shell.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Shell);
+    return Shell;
+})();
 var AngularUApp = (function () {
     function AngularUApp() {
-        this.name = 'World';
+        this.username = null;
     }
-    AngularUApp.prototype.greet = function () {
-        alert('Hello ' + this.name);
-    };
     AngularUApp = __decorate([
         angular2_1.Component({
             selector: 'angular-u-app'
         }),
         angular2_1.View({
             templateUrl: 'app.html',
-            directives: [Login]
+            directives: [Login, Shell, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
     ], AngularUApp);
